@@ -27,7 +27,7 @@ header .container{height:100%;display:flex;align-items:center;justify-content:sp
 <main id="top"><section class="hero container"><div class="overline"></div><h1><span>ConicFlow:</span> Constrained Inference-Time Optimal Control for Flow Matching Models</h1><p class="subtitle">Reward-guided generation with hard terminal constraints via receding-horizon, primal–dual optimal control of pretrained flow matching models.</p>
 <div class="authors"><a href="mailto:shervink@engineering.upenn.edu">Shervin Khalafi*</a><a href="mailto:kasra.fallah@columbia.edu">Kasra Fallah*</a><a href="mailto:sungcho9@engineering.upenn.edu">Sung Cho</a><a href="mailto:dongshed@utk.edu">Dongsheng Ding</a><a href="mailto:ja3451@columbia.edu">James Anderson</a><a href="mailto:aribeiro@engineering.upenn.edu">Alejandro Ribeiro</a></div>
 <div class="affils">University of Pennsylvania · Columbia University · University of Tennessee, Knoxville</div><div class="equal">* Equal contribution</div>
-<div class="actions"><a class="pill strong" href="#overview">Read overview ↓</a><a class="pill" href="https://github.com/shervinkhalafi/conicflow">Code ↗</a><a class="pill" href="#citation">BibTeX</a></div>
+<div class="actions"><a class="pill strong" href="#overview">Read overview ↓</a><a class="pill" href="https://arxiv.org/abs/2610.14307">Paper (arXiv) ↗</a><a class="pill" href="https://github.com/shervinkhalafi/conicflow">Code ↗</a><a class="pill" href="#citation">BibTeX</a></div>
 <figure class="paper-panel"><div class="panel-title">CONSTRAINED STEERING IN FLOW MATCHING — SCHEMATIC</div>
 <svg class="method-svg" viewBox="0 0 1000 335" role="img" aria-label="Flow matching from source distribution p zero through a controlled flow map to terminal distribution p one, with a predicted terminal point and reward feasibility region.">
 <defs><linearGradient id="flowgrad" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5087c0"/><stop offset="1" stop-color="#176d82"/></linearGradient></defs>
@@ -76,14 +76,17 @@ header .container{height:100%;display:flex;align-items:center;justify-content:sp
 <div style="overflow-x:auto"><table class="results-table"><thead><tr><th>Method</th><th>CLIP ↑</th><th>ImageReward ↑</th><th>PickScore ↑</th></tr></thead><tbody><tr><td>ConicFlow</td><td>0.130 ± 0.018</td><td>2.048 ± 0.455</td><td>6.158 ± 0.728</td></tr><tr><td>HardFlow</td><td>0.118 ± 0.021</td><td>1.279 ± 0.374</td><td>1.736 ± 0.472</td></tr><tr><td>FMRG</td><td>0.065 ± 0.008</td><td>1.278 ± 0.504</td><td>2.670 ± 0.073</td></tr></tbody></table></div>
 <div class="caption">All values are transcribed from Table 1 of the uploaded manuscript (p. 9). The original reward–energy curves and image panels are in Figures 1–3 of the paper.</div></div>
 </div></section>
-<section id="citation" class="section"><div class="container"><div class="label">05 / Resources</div><h2>Paper, implementation, and citation</h2><p>ConicFlow: Constrained Inference-Time Optimal Control for Flow Matching Models. Shervin Khalafi, Kasra Fallah, Sung Cho, Dongsheng Ding, James Anderson, Alejandro Ribeiro.</p>
-<div class="actions" style="justify-content:flex-start"><a class="pill" href="https://github.com/kasrafallah/ConicFlow">Project website source ↗</a><a class="pill" href="https://github.com/shervinkhalafi/conicflow">Implementation link given in paper ↗</a></div>
+<section id="citation" class="section"><div class="container"><div class="label">05 / Resources</div><h2>Paper, implementation, and citation</h2><p>ConicFlow: Constrained Inference-Time Optimal Control for Flow Matching Models. Shervin Khalafi, Kasra Fallah, Sung Cho, Dongsheng Ding, James Anderson, Alejandro Ribeiro. <a href="https://arxiv.org/abs/2610.14307">arXiv:2610.14307</a> (2026).</p>
+<div class="actions" style="justify-content:flex-start"><a class="pill" href="https://arxiv.org/abs/2610.14307">Read paper on arXiv ↗</a><a class="pill" href="https://github.com/kasrafallah/ConicFlow">Project website source ↗</a><a class="pill" href="https://github.com/shervinkhalafi/conicflow">Implementation link given in paper ↗</a></div>
 <div class="refs" id="bib">@misc{khalafi2026conicflow,
   title={ConicFlow: Constrained Inference-Time Optimal Control for Flow Matching Models},
   author={Khalafi, Shervin and Fallah, Kasra and Cho, Sung and Ding, Dongsheng and Anderson, James and Ribeiro, Alejandro},
   year={2026},
-  note={Preprint}
-}</div><button class="pill" style="margin-top:12px" onclick="copyBib()">Copy BibTeX</button><p class="note">Provisional citation pending a public identifier. The manuscript's implementation URL is reproduced as provided and has not been independently verified to be publicly accessible.</p></div></section></main>
+  eprint={2610.14307},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2610.14307}
+}</div><button class="pill" style="margin-top:12px" onclick="copyBib()">Copy BibTeX</button><p class="note">Official arXiv preprint posted October 9, 2026. The manuscript's implementation URL is reproduced as provided and has not been independently verified to be publicly accessible.</p></div></section></main>
 <footer><div class="container">ConicFlow · Research project website · All quantitative claims refer to the accompanying manuscript.</div></footer>
 <script>
 function setVariant(v){document.getElementById('t').classList.toggle('active',v==='t');document.getElementById('h').classList.toggle('active',v==='h');document.getElementById('terminal-mark').setAttribute('visibility',v==='t'?'visible':'hidden');document.getElementById('horizon-mark').setAttribute('visibility',v==='h'?'visible':'hidden');document.getElementById('variant-desc').textContent=v==='t'?'Reward and constraints are evaluated at the predicted terminal sample.':'Reward and constraints are evaluated at the local horizon endpoint.'}
