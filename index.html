@@ -86,7 +86,7 @@ header .container{height:100%;display:flex;align-items:center;justify-content:sp
   archivePrefix={arXiv},
   primaryClass={cs.AI},
   url={https://arxiv.org/abs/2610.14307}
-}</div><button class="pill" style="margin-top:12px" onclick="copyBib()">Copy BibTeX</button><p class="note">Official arXiv preprint posted October 9, 2026. The manuscript's implementation URL is reproduced as provided and has not been independently verified to be publicly accessible.</p></div></section></main>
+}</div><button class="pill" style="margin-top:12px" onclick="copyBib()">Copy BibTeX</button></div></section></main>
 <footer><div class="container">ConicFlow · Research project website · All quantitative claims refer to the accompanying manuscript.</div></footer>
 <script>
 function setVariant(v){document.getElementById('t').classList.toggle('active',v==='t');document.getElementById('h').classList.toggle('active',v==='h');document.getElementById('terminal-mark').setAttribute('visibility',v==='t'?'visible':'hidden');document.getElementById('horizon-mark').setAttribute('visibility',v==='h'?'visible':'hidden');document.getElementById('variant-desc').textContent=v==='t'?'Reward and constraints are evaluated at the predicted terminal sample.':'Reward and constraints are evaluated at the local horizon endpoint.'}
